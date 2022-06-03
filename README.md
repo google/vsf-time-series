@@ -17,21 +17,18 @@ Here, <br />
 * random_node_idx_split_runs - the number of randomly sampled subsets per trained model run
 * lower_limit_random_node_selections and upper_limit_random_node_selections - the percentage of variables in the subset **S**.
 
-<br />
 
 ### Training with predefined subset S, the S apriori setting
 ```
 python train_multi_step.py --data ./data/{0} --model_name {1} --device cuda:0 --expid {2} --epochs 100 --batch_size 64 --runs 50 --predefined_S --random_node_idx_split_runs 1 --lower_limit_random_node_selections 100 --upper_limit_random_node_selections 100 --step_size1 {3}
 ```
 
-<br />
 
 ### Training the model with Identity matrix as Adjacency
 ```
 python train_multi_step.py --data ./data/{0} --model_name {1} --device cuda:0 --expid {2} --epochs 100 --batch_size 64 --runs 10 --adj_identity_train_test --random_node_idx_split_runs 100 --lower_limit_random_node_selections 100 --upper_limit_random_node_selections 100 --step_size1 {3}
 ```
 
-<br />
 
 ## Inference
 
@@ -41,30 +38,25 @@ python train_multi_step.py --data ./data/{0} --model_name {1} --device cuda:0 --
 ```
 * Note that epochs are set to 0 and mask_remaining (alias of "Partial" setting in the paper) to True
 
-<br />
 
 ### Oracle setting inference
 ```
 python train_multi_step.py --data ./data/{0} --model_name {1} --device cuda:0 --expid {2} --epochs 0 --batch_size 64 --runs 10 --random_node_idx_split_runs 100 --lower_limit_random_node_selections 100 --upper_limit_random_node_selections 100 --do_full_set_oracle true --full_set_oracle_lower_limit 15 --full_set_oracle_upper_limit 15
 ```
 
-<br />
 
 ## Our Wrapper Technique
 ```
 python train_multi_step.py --data ./data/{0} --model_name {1} --device cuda:0 --expid {2} --epochs 0 --batch_size 64 --runs 10 --random_node_idx_split_runs 100 --lower_limit_random_node_selections 15 --upper_limit_random_node_selections 15 --borrow_from_train_data true --num_neighbors_borrow 5 --dist_exp_value 0.5 --neighbor_temp 0.1 --use_ewp True
 ```
 
-<br />
 
 ## Requirements
 The model is implemented using Python3 with dependencies specified in requirements.txt
 
-<br />
 
 ## Data Preparation
 
-<br />
 
 ### Multivariate time series datasets
 
@@ -92,7 +84,6 @@ Here <br />
 {1} is the directory where to save the train, valid, test splits. These are created from the first command <br />
 {2} the raw data filename (the downloaded file), such as - ECG_data.csv, metr-la.hd5, solar.txt, traffic.txt
 
-<br />
 
 ## Citation
 
