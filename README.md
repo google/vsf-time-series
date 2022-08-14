@@ -88,5 +88,21 @@ Here <br />
 ## Citation
 
 ```
-
+@inproceedings{10.1145/3534678.3539394,
+author = {Chauhan, Jatin and Raghuveer, Aravindan and Saket, Rishi and Nandy, Jay and Ravindran, Balaraman},
+title = {Multi-Variate Time Series Forecasting on Variable Subsets},
+year = {2022},
+isbn = {9781450393850},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3534678.3539394},
+doi = {10.1145/3534678.3539394},
+abstract = {We formulate a new inference task in the domain of multivariate time series forecasting (MTSF), called Variable Subset Forecast (VSF), where only a small subset of the variables is available during inference. Variables are absent during inference because of long-term data loss (eg. sensor failures) or high -> low-resource domain shift between train / test. To the best of our knowledge, robustness of MTSF models in presence of such failures, has not been studied in the literature. Through extensive evaluation, we first show that the performance of state of the art methods degrade significantly in the VSF setting. We propose a non-parametric, wrapper technique that can be applied on top any existing forecast models. Through systematic experiments across 4 datasets and 5 forecast models, we show that our technique is able to recover close to 95% performance of the models even when only 15% of the original variables are present.},
+booktitle = {Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+pages = {76–86},
+numpages = {11},
+keywords = {multivariate time series forecasting, variable subsets, partial inference, retrieval model},
+location = {Washington DC, USA},
+series = {KDD '22}
+}
 ```
